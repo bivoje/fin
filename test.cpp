@@ -3,6 +3,21 @@
 
 using namespace std;
 
+//some other ways..
+
+//can not change the state after compilation.
+//_ifin ifin(char c) {
+//  static bool piped = true;
+//  return _ifin(c, piped);
+//}
+
+//changing the state only required once at the start of program
+//piped stated can not be altered while running..
+//if(argv[1] == string("piped"))
+//  ifin.on();
+//else
+//  ifin.off();
+
 int main(int argc, char** argv)
 {
   _ifin ifin(argc>1 && argv[1]==string("--piped"));
