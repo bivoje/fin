@@ -8,24 +8,14 @@ int main()
   getfin fin(true);
 
   int x, y, z;
-  cout << "Enter ";
+  cout << "Enter : ";
   fin() >> x >> y >> z;
-  cout << "Get " << x << ' ' << y << ' ' << z << endl;
 
+  cout << "Enter 10 : ";
   int k[10];
-  //for(int i=0; i<10; i++)
-  //{
-  //  fin('\0','|') >> k[i];
-  //} fin('\0','\n');
-
-  //move constructor used
-  _fin f = fin('|','\n');
-  for(int i=0; i<10; i++)
-  {
-    //move constructor used
+  int i=0;
+  for(_fin f = fin('|','\n'); i<10; i++)
     f = (f >> k[i]);
-  }
-  //not moved, destructor called
 
   return 0;
 }
